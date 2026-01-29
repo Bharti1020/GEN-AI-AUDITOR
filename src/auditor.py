@@ -50,7 +50,7 @@ class Auditor:
 
         try:
             if self.gemini_key:
-                response = self.client.models.generate_content(model='gemini-2.0-flash', contents=prompt)
+                response = self.client.models.generate_content(model='gemini-3-flash-preview', contents=prompt)
                 response_text = response.text
             else:
                 return {"error": "No Gemini API Key Configured"}
